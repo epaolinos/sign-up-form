@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title id="signup-page-title"></title>
+    <link rel="stylesheet" href="../client/style/style.css">
+    <script src="../client/javascript/translator.js"></script>
+    <script src="../client/javascript/formvalidator.js"></script>
+</head>
+<body>
+    <div class="page-heading"></div>
+    <div class="central-field">
+        <a class="back-to-login" href="../client/login.html"><img src="../client/img/arrow.png" alt=""></a>
+        <br>
+        <form name="signup-form" onsubmit="return validateSignUpForm(this)" action="../server/signupevaluation.php"
+              method="post" enctype="multipart/form-data">
+            <h1 id="signup-heading" class="main-header signup-main-header"></h1>
+            <div>
+                <input type="text" id="fname-signin" class="form-input top-input" name="first_name"
+                       required minlength="1" maxlength="100"><br>
+                <input type="text" id="lname-signin" class="form-input middle-input" name="last_name"
+                        required minlength="1" maxlength="100"><br>
+                <input type="text" id="email-signin" class="form-input middle-input" name="email" required
+                       pattern="[^]+@[^]+\.[^]+"><br>
+                <input type="password" id="password-signin" class="form-input middle-input" name="password"
+                       required minlength="8"><br>
+                <input type="password" id="password-confirmation" class="form-input middle-input"
+                       placeholder="Confirm your password" name="password_confirm" required minlength="8"><br>
+                <div id="fl-send" class="form-input bottom-input" title="JPEG, GIF, PNG, max 2 MB">
+                    <label>
+                        <div class="insert-pic">
+                            <input id="fl-inp" onchange="picLoaded()" type="file"
+                                   name="file" accept="image/jpeg,image/gif,image/png">
+                            •••
+                        </div>
+                    </label>
+                    <div id="pic-text"></div>
+                </div>
+            </div>
+            <div class="hint-block">
+                <div id="incorrect-name" class="hint"></div>
+                <div id="incorrect-email" class="hint"></div>
+                <div id="confirmation-fail" class="hint"></div>
+                <div id="incorrect-sym" class="hint"></div>
+                <div id="short-pass" class="hint"></div>
+                <div id="uppercase" class="hint"></div>
+                <div id="lowercase" class="hint"></div>
+                <div id="numbers" class="hint"></div>
+                <div id="special-sym" class="hint"></div>
+            </div>
+            <div class="login-button">
+                <button id="submit-button" class="submit-button"></button><br>
+            </div>
+        </form>
+    <a class="signup-link" href=""></a>
+    <div class="langswitch-button">
+        <button id="lang-button" class="lang-button" onclick="changeLang()"></button><br>
+    </div>
+    <div class="central-field-footer"></div>
+    </div>
+
+</body>
+</html>

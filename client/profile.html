@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title id="profile-title"></title>
+    <link rel="stylesheet" href="../client/style/style.css">
+    <script src="../client/javascript/translator.js"></script>
+</head>
+<body>
+    <div class="page-heading"></div>
+    <div class="central-field">
+        <a class="back-to-login" href="../client/login.html"><img src="../client/img/arrow.png" alt=""></a><br><br>
+        <h1 class="main-header"><b id="hello-profile"></b><?php echo $fname; ?></h1>
+        <img src="../server/userpics/<?php echo $pic; ?>" width="150"><br><br>
+        <b id="fname-profile"></b><?php echo $fname; ?><br><br>
+        <b id="lname-profile"></b><?php echo $lname; ?><br><br>
+        <b>E-mail: </b><?php echo $email; ?><br><br>
+        <div class="langswitch-button">
+            <button id="lang-button" class="lang-button" onclick="changeLang()"></button><br>
+        </div>
+        <div class="central-field-footer"></div>
+    </div>
+</body>
+</html>

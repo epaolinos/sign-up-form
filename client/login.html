@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title id="mainpage-title"></title>
+    <link rel="stylesheet" href="../client/style/style.css">
+    <script src="../client/javascript/translator.js"></script>
+    <script src="../client/javascript/formvalidator.js"></script>
+</head>
+<body>
+    <div class="page-heading"></div>
+    <div class="central-field">
+        <form name="login-form" onsubmit="return validateLogInForm(this)" method="post"
+              action="../server/loginevaluation.php">
+            <h1 id="login-heading" class="main-header"></h1>
+            <div>
+                <input type="text" id="email-login" class="form-input top-input" name="email" required
+                       pattern="[^]+@[^]+\.[^]+"><br>
+                <input type="password" id="password-login" class="form-input bottom-input" name="password"
+                       required minlength="8">
+            </div>
+            <div class="hint-block">
+                <div id="incorrect-email" class="hint"></div>
+                <div id="incorrect-sym" class="hint"></div>
+                <div id="short-pass" class="hint"></div>
+                <div id="uppercase" class="hint"></div>
+                <div id="lowercase" class="hint"></div>
+                <div id="numbers" class="hint"></div>
+                <div id="special-sym" class="hint"></div>
+            </div>
+            <div class="login-button">
+                <button id="login-button" class="submit-button"></button><br>
+            </div>
+        </form>
+        <a id="new-user" class="signup-link" href="signup.html"></a>
+        <div class="langswitch-button">
+            <button id="lang-button" class="lang-button" onclick="changeLang()"></button><br>
+        </div>
+        <div class="central-field-footer"></div>
+    </div>
+</body>
+</html>
